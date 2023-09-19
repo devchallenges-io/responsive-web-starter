@@ -6,6 +6,11 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 * {
     box-sizing: border-box;
 }
