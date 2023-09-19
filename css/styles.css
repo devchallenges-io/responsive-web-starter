@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add some styles for body*/
+body {
+    min-height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #020617;
+    color: #cbd5e1;
+    font-family: 'Sora', sans-serif;
+    line-height: 1.5;
+    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
+    background-position: 0 0,25px 25px;
+    background-attachment: fixed;
+    background-size: 50px 50px;
+    overflow-x: hidden;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.get-started {
+    padding: 1rem 2rem;
+    border: 0.5px solid #1e293b;
+    background-color: #94a3b817;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 200;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 1.5rem;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.title::after {
+    content: "";
+    background: url('../images/blur-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -130px;
+    right: -75px;
+    width: 500px;
+    height: 250px;
+    opacity: 0.5;
+}
+
+.logo {
+    display: none;
+}
+
+
+.link-card {
+    padding: 1rem;
+    border: 0.5px solid transparent;
+    transition: all ease-in-out 50ms;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    border: 0.5px solid #1e293b;
+    background-color: #94a3b817;
+    border-radius: 8px;
+}
+
+.link-title {
+    font-size: 1.125rem;
+}
+
+.link-description {
+    font-size: 0.875rem;
+    font-weight: 200;
+    margin-top: 0.5rem;
+    color: #94a3b8;
+}
+
+@media screen and (min-width: 720px) {
+    .logo {
+        display: initial;
+    }
+
+    .get-started {
+        width: auto;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+  }
