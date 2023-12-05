@@ -1,130 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
-
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 * {
-    box-sizing: border-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
 }
-
-/* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-
+.box {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
 }
-
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+.box-image {
+  border-radius: 20px;
+  height: 400px;
+  width: 500px;
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+.tags {
+  display: flex;
+  gap: 20px;
 }
-
-.title {
-    position: relative;
-    text-align: center;
+.tag {
+  background-color: aqua;
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 3px 10px;
 }
-
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+.box-heading {
+  font-size: 50px;
 }
-
-.logo {
-    display: none;
+.box-footer {
+  border-top: 1px solid black;
+  padding-top: 20px;
+  color: gray;
 }
-
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
-}
-
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
-}
-
-.link-title {
-    font-size: 1.125rem;
-}
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
-  }
